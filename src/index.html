@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- web logo -->
+  <link rel="icon" type="image/svg+xml" href="./assets/maskedWhite.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Card Component</title>
+</head>
+<body class="antialiased font-Josef">
+  <section class="flex items-center justify-center py-0 px-0 min-h-screen min-w-[375px]">
+    <!-- main div -->
+    <div class="md:grid md:grid-cols-5 md:grid-rows-5 md:grid-flow-col md:items-center md:justify-center">
+      <!-- logo div -->
+      <div class="p-10 md:px-32 md:row-span-1 md:col-span-3">
+        <img src="./assets/icons/logo.svg" alt="logo">
+      </div>
+      <!-- image div -->
+      <div class="order-1 md:order-2 md:w-full md:row-span-5 md:col-span-3">
+        <img src="./assets/images/hero-mobile.jpg" alt="image-mobile" class="h-full w-full object-cover md:hidden">
+        <img src="./assets/images/hero-desktop.jpg" alt="image-desktop" class="hidden h-full w-full object-cover md:inline-grid">
+      </div>
+      <!-- typography div -->
+      <div class="py-20 px-10 md:py-0 md:pl-32 md:pr-[240px] md:row-span-4 md:col-span-3">
+        <!-- heading -->
+        <h1 class="uppercase text-7xl text-center text-brown font-extralight md:text-start tracking-widest">we're</h1>
+        <h1 class="uppercase text-7xl text-center md:text-start text-wrap tracking-widest">coming soon</h1>
+        <!-- paragraph -->
+        <p class="mt-6 text-center text-brown font-medium md:text-start">
+          Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <!-- email -->
+        <form class="relative">
+        <input class="border-lightgray mt-10 py-2 px-6 border-2 rounded-full w-full hover:border-orange" placeholder="Email Address" id="email-field" type="email" spellcheck="false" name="email">
+        <div>
+          <img class="absolute bottom-[10px] right-14" src="./assets/icons/icon-error.svg" alt="error icon">
+          <!-- arrow -->
+          <div class="absolute bottom-0 -right-5 bg-gradient-to-tr from-beige to-orange w-16 h-11 rounded-full cursor-pointer shadow-lg hover:bg-gradient-to-tr hover:from-beige hover:to-brown">
+            <a href="#"></a>
+            <img class="absolute w-3 z-10 bottom-[12px] right-6" src="./assets/icons/icon-arrow.svg" alt="submit arrow">
+          </div>
+        </div>
+      </form>
+      <!-- error div -->
+      <div>
+      <span id="email-error" class="error-field text-sm text-orange mt-2 ml-6 transition-colors"></span>
+      <span id="#" class="error-field text-sm text-orange mt-2 ml-6 hidden">Email address cannot be empty</span>
+      </div>
+      </div>
+      </div>
+    </section>
+    <!-- javascript -->
+    <script src="./input.js"></script>
+</body>
+</html>
